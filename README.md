@@ -13,6 +13,6 @@ We would like to test different scenarios that the API offers:
 ## Instructions
 You will need to fork the repository and build the solution in Github **publicly**. Once you are finished, let HR know and share a link to your fork or a Zip file with your solution and the URL of the repository.
 
-Implementation deadline is 1 week. Please let us know the time that you spent to achieve the task.
+Implementation deadline is 3 days. Please let us know the time that you spent to achieve the task.
 
 
