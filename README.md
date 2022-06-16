@@ -1,6 +1,6 @@
 # SDET-test
 ## Challenge
-Create pilot Java test framework for testing NASA's open API.
+Create pilot Java test framework for testing NASA's open API >>>> Create pilot Java test framework for testing NASA’s open API
 
 NASA has an open API: https://api.nasa.gov/index.html#getting-started. It grants access to different features e.g: Astronomy Picture of the Day, Mars Rover Photos, etc.
 
