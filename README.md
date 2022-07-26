@@ -13,6 +13,8 @@ We would like to test different scenarios that the API offers:
 ## Instructions
 You will need to fork the repository and build the solution in Github **publicly**. Once you are finished, let HR know and share a link to your fork or a Zip file with your solution and the URL of the repository.
 
+Please use TestNG, Postman, or Junit to complete the challenge.  For this challenge, do not use Cucumber.
+
 Implementation deadline is 3 days. Please let us know the time that you spent to achieve the task.
 
 
