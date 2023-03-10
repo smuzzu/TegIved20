@@ -16,3 +16,7 @@ jobs:
           java-version: 1.8
 
       - run: mvn -B package --file pom.xml
+      
+      - run: cd target
+
+      - run: ls -a
