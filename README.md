@@ -1,24 +1,26 @@
-# SDET-test
-## Challenge
-Create pilot Java test framework for testing NASA's open API >>>> Create pilot Java test framework for testing NASA’s open API
+# Some developement notes
 
-NASA has an open API: https://api.nasa.gov/index.html#getting-started. It grants access to different features e.g: Astronomy Picture of the Day, Mars Rover Photos, etc.
+I am using java 8, Maven, TestNG and Apache Httpcomponents on this project.
+Httpcomponents is a fast and reliable java lib f or rest api test and some web scrapping scenarios as well.
 
-We would like to test different scenarios that the API offers:
-1. Retrieve the first 10 Mars photos made by "Curiosity" on 1000 Martian sol.
-2. Retrieve the first 10 Mars photos made by "Curiosity" on Earth date equal to 1000 Martian sol.
-3. Retrieve and compare the first 10 Mars photos made by "Curiosity" on 1000 sol and on Earth date equal to 1000 Martian sol.
-4. Validate that the amounts of pictures that each "Curiosity" camera took on 1000 Mars sol is not greater than 10 times the amount taken by other cameras on the same date.
-5. Write integration tests around the core functionality, not functional tests.
+TestSuite1.java contains 4 automatic test
 
-## Instructions
-You will need to fork the repository and build the solution in Github **publicly**. Once you are finished, let HR know and share a link to your fork or a Zip file with your solution and the URL of the repository.
+After ruining the tests you can check results in a simple html interface: target/surefire-reports/index.html.  I am attaching two sample screenshots on src/doc folder
 
-Please use TestNG, Postman, or Junit to complete the challenge.  For this challenge, do not use Cucumber.
+As Martian Solar days lasts 24 hours, 39 minutes and 35 seconds I am not a space expert but I think It may be some scenarios where a Martian day will fit in two pieces of a Earth day. I tried Martian day 1000 and api results overlaps 100% with 2015-05-30 on earth day therefore for the purpose of this test I will ignore the posibility of having a Martian Sol day in two pieces of consecutive Earth days.
 
-Implementation deadline is 3 days. Please let us know the time that you spent to achieve the task.
+Assert.assertEqualsNoOrder clould have been used on test 1, 2 and 3 but I preferred to loop every value to provide more precise information about the exact photo that makes the test fail
 
-## Deliverables we expect:
-Code in a public Github repo
+I reused some test assets and improve time spent on suite run.
+I improved test 3 and 4 to reuse previous API request to make all the suite run faster
 
-README file with the decisions taken and important notes
+Test 1,2 and 3 will succeed but test 4 will fail in a consistent way because "MAST" camera have far more than 10 times photos taken than the other ones on Martian Sol day 1000
+"MAST" -> 859
+"NAVCAM" -> 10
+"RHAZ" ->  4
+"FHAZ" ->  4
+"CHEMCAM" -> 4
+
+With some more time I would like to improve the HttpLib adding some logging (log4J)
+
+I am open to any suggestions, improvements. 

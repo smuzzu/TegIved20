@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="TEGIVED:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TEGIVED_jar</output-path>
+    <root id="archive" name="TEGIVED.jar">
+      <element id="module-output" name="TEGIVED" />
+      <element id="module-test-output" name="TEGIVED" />
+    </root>
+  </artifact>
+</component>
